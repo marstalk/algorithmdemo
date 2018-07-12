@@ -1,7 +1,6 @@
 package com.marstalk.designpattern.factorymethodpattern.test;
 
 import com.marstalk.designpattern.factorymethodpattern.DatabaseLoggerFactory;
-import com.marstalk.designpattern.factorymethodpattern.FileLoggerFactory;
 import com.marstalk.designpattern.factorymethodpattern.LoggerFactory;
 
 import java.lang.reflect.AnnotatedType;
@@ -33,8 +32,7 @@ public class Client {
     }
 
     public static void main(String[] args) {
-        LoggerFactory loggerFactory = new FileLoggerFactory();
-        loggerFactory = new DatabaseLoggerFactory();
+        LoggerFactory loggerFactory = new DatabaseLoggerFactory();
 
 
         loggerFactory.createLogger().writeLog();
