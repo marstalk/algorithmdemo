@@ -27,7 +27,7 @@ public class MainDemo {
 
 }
 
-class Waiter implements Runnable{
+class Waiter implements Runnable {
     private CountDownLatch countDownLatch;
 
     public Waiter(CountDownLatch countDownLatch) {
@@ -46,7 +46,7 @@ class Waiter implements Runnable{
     }
 }
 
-class Decrementer implements Runnable{
+class Decrementer implements Runnable {
     private CountDownLatch countDownLatch;
 
     public Decrementer(CountDownLatch countDownLatch) {
@@ -55,7 +55,7 @@ class Decrementer implements Runnable{
 
     @Override
     public void run() {
-        
+
         this.countDownLatch.countDown();
         System.out.println(countDownLatch.getCount());
         try {
