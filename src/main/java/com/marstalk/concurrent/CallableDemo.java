@@ -1,6 +1,9 @@
 package com.marstalk.concurrent;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * @author Mars
@@ -9,14 +12,13 @@ import java.util.concurrent.Callable;
 public class CallableDemo {
     public static void main(String[] args) throws Exception {
         MyCallable myCallable = new MyCallable();
-        String call = myCallable.call();
 
-        MyCallable myCallable2 = new MyCallable();
-        String call2 = myCallable2.call();
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        Future<String> future = executorService.submit(myCallable);
 
-        System.out.println(1);
-        System.out.println(call);
-        System.out.println(2);
+        System.out.println("mainThread..");
+        System.out.println(future.get());
+        System.out.println("mainThread 2 ..");
     }
 }
 
