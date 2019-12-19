@@ -1,4 +1,4 @@
-package com.marstalk.concurrent.interrupted;
+package com.marstalk.concurrent.d4_interrupted;
 
 /**
  * 这个用来测试interrupted的功能和特性。
@@ -8,6 +8,7 @@ package com.marstalk.concurrent.interrupted;
  * Thread.interrupted(): clearState = true， 清理标志。
  * <p>
  * 以下代码就是验证这个的，其实可以直接看源码，就是知道了。
+ *
  */
 public class InterruptedDemo {
     public static void main(String[] args) {

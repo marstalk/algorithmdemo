@@ -1,4 +1,4 @@
-package com.marstalk.concurrent.notifyAndWait;
+package com.marstalk.concurrent.d432_notifyAndWait;
 
 import java.util.ArrayList;
 import java.util.List;
