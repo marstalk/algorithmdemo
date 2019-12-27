@@ -5,14 +5,19 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Component
 @EnableAsync
 public class NonParallelSchedule {
 
     private static final ConcurrentLinkedQueue<String> queue = new ConcurrentLinkedQueue<>();
-    private static final int count = 100;
+    private static final int count = 20000;
+    private static Lock lock = new ReentrantLock();
 
     static{
         for (int i = 0; i < count; i++) {
@@ -25,16 +30,31 @@ public class NonParallelSchedule {
     @Async
     public void pollTask() {
         System.out.println("-----------Start new Schedule");
-        while (!queue.isEmpty()) {
+        int i = 1000;
+        List<String> list = new ArrayList<>();
+        while (i > 0) {
+            i--;
+            list.add(queue.poll());
+        }
+
+        test(list);
+
+        System.out.println("------------End Schedule");
+    }
+
+    private void test(List<String> list) {
+        lock.lock();
+        for (String str : list) {
+            System.out.println(Thread.currentThread().getThreadGroup().getName() + Thread.currentThread().getId() + Thread.currentThread().getName() + " Poll from Queue: " + str);
             try {
-                Thread.sleep(2_000);
+                Thread.sleep(240);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
-            System.out.println(Thread.currentThread().getId() + Thread.currentThread().getName() + " Poll from Queue: " + queue.poll());
         }
-        System.out.println("------------End Schedule");
+
+        lock.unlock();
+
     }
 
     @Scheduled(fixedRate = 1000_000)
