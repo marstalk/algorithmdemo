@@ -1,11 +1,11 @@
-package com.marstalk.concurrent.notifyAndWait;
+package com.marstalk.concurrent.d432_notifyAndWait;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Mars
- * Created on 2018/12/19
+ *         Created on 2018/12/19
  */
 public class MyStack {
     private List<String> list = new ArrayList<String>();

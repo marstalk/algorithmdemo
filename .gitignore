@@ -1,3 +1,5 @@
-target
+target/*
 .idea
 ./algorithmdemo.iml
+/target/
+/target

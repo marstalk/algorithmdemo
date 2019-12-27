@@ -6,20 +6,20 @@ import java.util.concurrent.CountDownLatch;
  * @author Mars
  * Created on 2018/12/23
  */
-public class MainDemo {
+public class CountDownLatchDemo {
 
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch latch = new CountDownLatch(3);
         Waiter waiter = new Waiter(latch);
         Decrementer decrementer = new Decrementer(latch);
 
-        Thread waiterThread = new Thread(waiter);
-        Thread decrementerThread = new Thread(decrementer);
+        Thread waiterThread = new Thread(waiter, "waiter");
+        Thread decrementerThread = new Thread(decrementer, "decrementer");
 
         waiterThread.start();
         decrementerThread.start();
-        waiterThread.join();
-        decrementerThread.join();
+
+        Thread.sleep(4000);
 
 
     }
@@ -57,7 +57,7 @@ class Decrementer implements Runnable {
     public void run() {
 
         this.countDownLatch.countDown();
-        System.out.println(countDownLatch.getCount());
+        System.out.println("decrementer count" + countDownLatch.getCount());
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

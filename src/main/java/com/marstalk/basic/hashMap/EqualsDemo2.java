@@ -9,7 +9,7 @@ public class EqualsDemo2 {
         map1.put("b", "bValue");
 
 
-        HashMap<Object, Object> map2 = new HashMap<>();
+        HashMap<Object, Object> map2 = new HashMap<>(33);
         map2.put("a", "aValue");
         map2.put("b", "bValue");
 
