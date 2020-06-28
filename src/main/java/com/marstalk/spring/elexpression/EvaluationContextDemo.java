@@ -2,6 +2,7 @@ package com.marstalk.spring.elexpression;
 
 import org.springframework.expression.Expression;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
 
 public class EvaluationContextDemo {
     public static void main(String[] args) {
@@ -10,6 +11,9 @@ public class EvaluationContextDemo {
         Role role = new Role(1L, "role_name", "note");
         Expression exp = spelExpressionParser.parseExpression("note");
         System.out.println(exp.getValue(role));
+
+        StandardEvaluationContext ctx = new StandardEvaluationContext(role);
+
     }
 
 
