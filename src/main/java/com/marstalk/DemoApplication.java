@@ -6,8 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling
-@ComponentScan(value = "com.marstalk.springboot")
 public class DemoApplication {
 
     public static void main(String[] args) {
