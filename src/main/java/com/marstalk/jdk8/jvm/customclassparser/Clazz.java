@@ -1,14 +1,22 @@
-package com.marstalk.jdk8.jvm;
+package com.marstalk.jdk8.jvm.customclassparser;
 
+import com.marstalk.jdk8.jvm.customclassparser.constant.Constant;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class ClassFile {
+/**
+ * Human readable object refers to specific class file.
+ * For JDK8
+ */
+public class Clazz {
     private int magic;
     private short minorVersion;
     private short majorVersion;
 
     private int constantPoolCount;
-    private CPInfo[] constantPool;
+    private List<Constant> constants = new ArrayList<>();
 
     private int accessFlags;
     private int thisClass;
@@ -20,6 +28,13 @@ public class ClassFile {
     private MethodInfo[] methods;
     private int attributesCounts;
     private AttributeInfo[] attributes;
+
+    public Clazz() {
+    }
+
+    public void addConstant(Constant constant) {
+        this.constants.add(constant);
+    }
 
     public int getMagic() {
         return magic;
@@ -51,14 +66,6 @@ public class ClassFile {
 
     public void setConstantPoolCount(int constantPoolCount) {
         this.constantPoolCount = constantPoolCount;
-    }
-
-    public CPInfo[] getConstantPool() {
-        return constantPool;
-    }
-
-    public void setConstantPool(CPInfo[] constantPool) {
-        this.constantPool = constantPool;
     }
 
     public int getAccessFlags() {
@@ -143,12 +150,12 @@ public class ClassFile {
 
     @Override
     public String toString() {
-        return "ClassFile{" +
+        return "Clazz{" +
                 "magic=" + magic +
                 ", minorVersion=" + minorVersion +
                 ", majorVersion=" + majorVersion +
                 ", constantPoolCount=" + constantPoolCount +
-                ", constantPool=" + Arrays.toString(constantPool) +
+                ", constants=" + constants +
                 ", accessFlags=" + accessFlags +
                 ", thisClass=" + thisClass +
                 ", interfacesCount=" + interfacesCount +
@@ -160,5 +167,13 @@ public class ClassFile {
                 ", attributesCounts=" + attributesCounts +
                 ", attributes=" + Arrays.toString(attributes) +
                 '}';
+    }
+
+    public List<Constant> getConstants() {
+        return constants;
+    }
+
+    public void setConstants(List<Constant> constants) {
+        this.constants = constants;
     }
 }

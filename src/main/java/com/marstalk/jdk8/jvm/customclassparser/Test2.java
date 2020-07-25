@@ -1,4 +1,4 @@
-package com.marstalk.jdk8.jvm;
+package com.marstalk.jdk8.jvm.customclassparser;
 
 /**
  * This is used for ClassParser to test.
