@@ -1,4 +1,4 @@
-package com.marstalk.basic.hashMap;
+package com.marstalk.jdk8.basic.hashMap;
 
 public class HashMap8Demo {
     public static void main(String[] args) {

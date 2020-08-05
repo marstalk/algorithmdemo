@@ -1,4 +1,4 @@
-package com.marstalk.basic.typeint;
+package com.marstalk.jdk8.basic.typeint;
 
 /**
  * 实线method方法，使得，使得程序运行后输出：

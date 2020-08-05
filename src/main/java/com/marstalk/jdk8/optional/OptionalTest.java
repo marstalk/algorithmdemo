@@ -1,4 +1,4 @@
-package com.marstalk.jdk8newfeature.optional;
+package com.marstalk.jdk8.optional;
 
 import java.util.ArrayList;
 import java.util.List;

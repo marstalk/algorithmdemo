@@ -1,4 +1,4 @@
-package com.marstalk.basic.serializable;
+package com.marstalk.jdk8.basic.serializable;
 
 import com.alibaba.fastjson.JSONObject;
 

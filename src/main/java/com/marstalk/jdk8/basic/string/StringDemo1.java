@@ -1,4 +1,4 @@
-package com.marstalk.basic.string;
+package com.marstalk.jdk8.basic.string;
 
 /**
  * Created by mars on 6/6/18.

@@ -1,4 +1,4 @@
-package com.marstalk.basic.hashMap;
+package com.marstalk.jdk8.basic.hashMap;
 
 public class MyHashMap<K, V> implements MyMap<K, V> {
 

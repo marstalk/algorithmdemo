@@ -1,4 +1,4 @@
-package com.marstalk.basic.string;
+package com.marstalk.jdk8.basic.string;
 
 public class ConstantFoldingDemo {
     public static final String abc = "abc";

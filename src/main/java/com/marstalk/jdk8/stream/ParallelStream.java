@@ -1,4 +1,4 @@
-package com.marstalk.jdk8newfeature.stream;
+package com.marstalk.jdk8.stream;
 
 public class ParallelStream {
 

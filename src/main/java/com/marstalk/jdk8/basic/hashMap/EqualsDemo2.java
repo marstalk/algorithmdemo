@@ -1,4 +1,4 @@
-package com.marstalk.basic.hashMap;
+package com.marstalk.jdk8.basic.hashMap;
 
 import java.util.HashMap;
 
