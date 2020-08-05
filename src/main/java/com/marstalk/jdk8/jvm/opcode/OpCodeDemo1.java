@@ -1,6 +1,7 @@
 package com.marstalk.jdk8.jvm.opcode;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class OpCodeDemo1 {
     public static void main(String[] args) {

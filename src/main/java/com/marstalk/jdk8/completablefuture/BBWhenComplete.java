@@ -1,4 +1,4 @@
-package com.marstalk.jdk8newfeature.completablefuture;
+package com.marstalk.jdk8.completablefuture;
 
 import org.testng.annotations.Test;
 
