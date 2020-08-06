@@ -1,4 +1,4 @@
-package com.marstalk.concurrent.d431_javapsynchronize;
+package com.marstalk.concurrent.d4_javapsynchronize;
 
 /**
  * 通过Javap -p Synchronized.class 可以看到class文件的信息。
