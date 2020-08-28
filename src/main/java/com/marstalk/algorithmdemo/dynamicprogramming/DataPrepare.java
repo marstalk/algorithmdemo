@@ -40,7 +40,7 @@ public class DataPrepare {
     }
 
     private void case1() {
-        BAG_SIZE = 4;
+        BAG_SIZE = 6.3F;
         goods.add(RING);
         goods.add(STEREO);
         goods.add(LAPTOP);
