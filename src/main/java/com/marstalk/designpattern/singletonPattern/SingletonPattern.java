@@ -1,4 +1,4 @@
-package com.marstalk.designpattern;
+package com.marstalk.designpattern.singletonPattern;
 
 /**
  * @author shanzhonglaosou
