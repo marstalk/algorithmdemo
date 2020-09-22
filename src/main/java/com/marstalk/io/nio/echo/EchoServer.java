@@ -1,4 +1,4 @@
-package com.marstalk.nio.echo;
+package com.marstalk.io.nio.echo;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

@@ -1,4 +1,4 @@
-package com.marstalk.nio;
+package com.marstalk.io.nio;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

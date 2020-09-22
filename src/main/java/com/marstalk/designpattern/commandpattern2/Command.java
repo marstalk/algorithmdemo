@@ -10,15 +10,15 @@ public interface Command  {
     /**
      * 撤销命令可以撤销上一个命令的效果，需要遥控器记录下上一个具体的命令。
      */
-    void undo();
+    //void undo();
 
     /**
      * 将命令持久化
      */
-    void store();
+    //void store();
 
     /**
      * 去读命令，用于还原现场。
      */
-    void load();
+    //void load();
 }
