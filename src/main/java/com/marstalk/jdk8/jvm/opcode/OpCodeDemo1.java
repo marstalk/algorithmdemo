@@ -56,5 +56,29 @@ public class OpCodeDemo1 {
         System.out.println(i++ + ++i + i-- - --i);
     }
 
+    /**
+     *  0 aload_1
+     *  1 ifnonnull 12 (+11)
+     *  4 getstatic #4 <java/lang/System.out>
+     *  7 ldc #13 <1>
+     *  9 invokevirtual #10 <java/io/PrintStream.println>
+     * 12 aconst_null
+     * 13 aload_1
+     * 14 if_acmpne 25 (+11)
+     * 17 getstatic #4 <java/lang/System.out>
+     * 20 ldc #14 <22>
+     * 22 invokevirtual #10 <java/io/PrintStream.println>
+     * 25 return
+     * @param str
+     */
+    public void equal(String str){
+        if (str == null) {
+            System.out.println("1");
+        }
+        if (null == str) {
+            System.out.println("22");
+        }
+    }
+
 
 }

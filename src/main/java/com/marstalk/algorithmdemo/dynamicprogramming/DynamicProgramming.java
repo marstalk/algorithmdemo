@@ -55,11 +55,16 @@ public class DynamicProgramming extends DataPrepare{
         //2.1 计算背包剩余剩余容量：
         float leftSize = virtualBags.get(j) - wMap.get(goodName);
         //2.2 根据剩余容量找到【上一行】的价值
-        //TODO 考虑更加复杂的物品重量分布，比如总重量是4.5，而有一个物品的重量是0.7
         int index = findIndex(leftSize, virtualBags);
         return vMap.get(goodName) + valueGrid(valueGrid, i-1, index);
     }
 
+    /**
+     * 考虑更加复杂的物品重量分布，比如总重量是4.5，而有一个物品的重量是0.7
+     * @param leftSize
+     * @param virtualBags
+     * @return
+     */
     private int findIndex(float leftSize, List<Float> virtualBags) {
         for (int i = 0; i < virtualBags.size(); i++) {
             if (virtualBags.get(i) >= leftSize) {
