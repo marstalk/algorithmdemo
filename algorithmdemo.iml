@@ -123,7 +123,7 @@
     <orderEntry type="library" name="Maven: org.jodd:jodd-core:4.1.4" level="project" />
     <orderEntry type="library" name="Maven: org.jodd:jodd-upload:4.1.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
-    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter:5.7.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter:5.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.0.0" level="project" />
@@ -150,5 +150,7 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.21" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.11.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:1.4.200" level="project" />
+    <orderEntry type="library" name="Maven: redis.clients:jedis:3.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.5.0" level="project" />
   </component>
 </module>
