@@ -1,14 +1,14 @@
-package com.marstalk;
+package com.marstalk.springboot.aci;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class ACI {
 
     public static void main(String[] args) {
-        SpringApplication springApplication = new SpringApplication(DemoApplication.class);
+        SpringApplication springApplication = new SpringApplication(ACI.class);
         springApplication.run(args);
-
     }
+
 }

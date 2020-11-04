@@ -1,0 +1,5 @@
+#for SARl SpringApplicationRunListener
+#org.springframework.boot.SpringApplicationRunListener=com.marstalk.springboot.sarl.MySpringApplicationRunListener
+
+#for ACI ApplicationContextInitializer
+org.springframework.context.ApplicationContextInitializer=com.marstalk.springboot.aci.MyApplicationContextInitializer

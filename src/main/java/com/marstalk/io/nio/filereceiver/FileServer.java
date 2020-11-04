@@ -34,9 +34,10 @@ public class FileServer {
         System.out.println("accept client, start to send file");
         try (FileChannel abcFile = FileChannel.open(Paths.get("/Users/louisliu/IdeaProjects/algorithmdemo/src/main/java/com/marstalk/io/nio/filereceiver/abc.txt"))) {
             abcFile.transferTo(0, abcFile.size(), socketChannel);
-            //TODO 在SocketChannel传输通道关闭前，尽量发送一个输出结束标志到对方端。
-            System.out.println("send file successfully, close channel and close socket");
+            //在SocketChannel传输通道关闭前，尽量发送一个输出结束标志到对方端。
+            socketChannel.shutdownOutput();
             socketChannel.close();
+            System.out.println("send file successfully, close channel and close socket");
         } catch (IOException e) {
             e.printStackTrace();
         }
