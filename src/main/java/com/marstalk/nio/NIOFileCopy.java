@@ -29,9 +29,11 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
 public class NIOFileCopy {
+    private static final String mac_file = "/Users/louisliu/Downloads/atlassian-confluence-6.15.9-x64.exe";
+    private static final String windows_file = "D:\\backup\\atlassian-confluence-7.4.1-x64.exe";
 
-    public static final String SOURCE_FILE_NAME = "D:\\backup\\atlassian-confluence-7.4.1-x64.exe";
-    public static final String DEST_FILE_NAME = "D:\\backup\\atlassian-confluence-7.4.1-x64.exe";
+    public static final String SOURCE_FILE_NAME = mac_file;
+    public static final String DEST_FILE_NAME = mac_file;
 
     public static void main(String[] args) throws IOException, RunnerException {
         Options options = new OptionsBuilder().include(NIOFileCopy.class.getSimpleName()).warmupIterations(5).measurementIterations(5).forks(1).build();
