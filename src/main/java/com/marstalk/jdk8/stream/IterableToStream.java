@@ -1,9 +1,6 @@
 package com.marstalk.jdk8.stream;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -11,9 +8,11 @@ import java.util.stream.StreamSupport;
 
 /**
  * 如何正确地将Iterable转为Stream
+ *
  * @author shanzhonglaosou
  */
 public class IterableToStream {
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -23,8 +22,10 @@ public class IterableToStream {
         toSqlValue(list);
         toSqlValue2(list);
     }
+
     /**
      * 不符合要求
+     *
      * @param iterable
      * @return '[a, 99]'
      */
@@ -33,8 +34,10 @@ public class IterableToStream {
         System.out.println(collect);
         return collect;
     }
+
     /**
      * 这种才符合
+     *
      * @param iterable
      * @return 'a','99'
      */
