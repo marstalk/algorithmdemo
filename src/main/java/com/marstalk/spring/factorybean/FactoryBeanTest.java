@@ -2,9 +2,13 @@ package com.marstalk.spring.factorybean;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/**
+ * 测试factoryBean
+ *
+ * @author shanzhonglaosou
+ */
 @ComponentScan("com.marstalk.spring.factorybean")
 public class FactoryBeanTest {
 

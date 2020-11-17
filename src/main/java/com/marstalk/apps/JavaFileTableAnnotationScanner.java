@@ -14,11 +14,11 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * 根据根目录，遍历所有的Java文件，遍历每一行。
+ * 根据根目录，遍历所有的Java文件，遍历每一行。 找到使用了@Table注解的，并且把相关信息解析出来。
  *
  * @author shanzhonglaosou
  */
-public class JavaFileScanner {
+public class JavaFileTableAnnotationScanner {
 
     private static Set<String> resultSet = new HashSet<>();
     private static int count = 0;
