@@ -12,6 +12,7 @@ public class ReduceDemo {
                 .reduce(0, (subtotal, element) -> subtotal + element);
         System.out.println(result);//21
 
+       numbers.stream().map(String::valueOf).reduce("", (s, b) -> s + b);
     }
 
 }
