@@ -37,4 +37,21 @@ public class ByteUtils {
         }
         return value;
     }
+
+    /**
+     * integer to human readable binary
+     * @param i
+     * @return
+     */
+    public static String int2BinaryStr(int i) {
+        return recursive(i);
+    }
+
+    private static String recursive(int i) {
+        if (i == 1 || i == 0) {
+            return i + "";
+        }
+        int j = i % 2;
+        return recursive((i - j) / 2) + j;
+    }
 }

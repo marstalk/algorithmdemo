@@ -8,10 +8,14 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-public class DiscardServer {
+/**
+ *
+ * @author shanzhonglaosou
+ */
+public class NettyDiscardServer {
     private int port;
 
-    public DiscardServer(int port) {
+    public NettyDiscardServer(int port) {
         this.port = port;
     }
 
@@ -39,6 +43,6 @@ public class DiscardServer {
     }
 
     public static void main(String[] args) throws Exception {
-        new DiscardServer(9999).run();
+        new NettyDiscardServer(9999).run();
     }
 }
