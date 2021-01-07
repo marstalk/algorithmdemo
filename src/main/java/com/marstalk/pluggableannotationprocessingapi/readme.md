@@ -9,3 +9,8 @@ mvn compiler:compile@compile-project
 ```
 参考：
 https://stackoverflow.com/questions/36248959/bad-service-configuration-file-or-exception-thrown-while-constructing-processor
+
+在META-INF/services目录下创建文件javax.annotation.processing.Processor，内容是：
+```
+com.marstalk.pluggableannotationprocessingapi.BuilderPropertyProcessor
+```
