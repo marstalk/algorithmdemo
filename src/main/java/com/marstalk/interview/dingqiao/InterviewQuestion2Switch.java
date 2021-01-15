@@ -9,7 +9,7 @@ package com.marstalk.interview.dingqiao;
  * 下面例子的执行过程是这样的：<br/>
  * switch type=2,则会跳到case 2 这里。因为没有break，所以会继续执行后面的代码，包括case 3 和default。所以最后结果输出2。<br/>
  */
-public class InterviewSwitch {
+public class InterviewQuestion2Switch {
     public static void main(String[] args) {
         chooseBest(2);
     }
