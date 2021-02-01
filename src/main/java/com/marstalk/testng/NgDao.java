@@ -5,7 +5,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class NgDao {
 
-    public void hi() {
-        System.out.println("hi from ngDao");
+    public String hi(String name) {
+        String hi = "hi " + name + "from ngDao";
+        System.out.println(hi);
+        return hi;
+    }
+
+    public String queryByName(String name) {
+        System.out.println("ngDao queryByName fromDB");
+        return "Shanzhonglaosou";
     }
 }

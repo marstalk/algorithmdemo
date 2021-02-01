@@ -9,8 +9,13 @@ public class NgService {
     @Autowired
     private NgDao ngDao;
 
-    public void hi(){
-        ngDao.hi();
+    public String hi(String name) {
+        return ngDao.hi(name);
+    }
+
+    public String findUser(String name) {
+        System.out.println("NgService do some logic");
+        return ngDao.queryByName(name);
     }
 
 
