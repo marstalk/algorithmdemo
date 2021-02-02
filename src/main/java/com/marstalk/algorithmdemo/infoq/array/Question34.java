@@ -14,6 +14,11 @@ public class Question34 {
         findLeaders(arr);
     }
 
+    /**
+     * 从右到左遍历是简单的方法了。
+     *
+     * @param arr
+     */
     private static void findLeaders(int[] arr) {
         int max = Integer.MIN_VALUE;
         for (int i = arr.length - 1; i > -1; i--) {
