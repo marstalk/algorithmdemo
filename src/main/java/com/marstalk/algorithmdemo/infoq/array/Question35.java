@@ -6,37 +6,58 @@ package com.marstalk.algorithmdemo.infoq.array;
  */
 public class Question35 {
     public static void main(String[] args) {
-        int[] arr = {0, 0, 0, 1, 1, 1, 1, 1, 1};
+        int[] arr = new int[]{0, 0, 0, 1, 1, 1, 1};
         count(arr);
+        count2(arr);
     }
 
     /**
-     * 二分法找到那个左边是0，本身是1的元素
+     * 排好序的数组，都可以考虑下能不能使用二分法。
+     * divide and conquer
+     * @param arr
+     */
+    private static void count2(int[] arr) {
+        int count = 0;
+        int start = 0;
+        int end = arr.length - 1;
+
+        //检查边界。
+        if (arr[start] == 1) {
+            count = arr.length;
+        } else if (arr[end] == 0) {
+            count = 0;
+        }
+
+        while (start < end) {
+            int mid = (start + end) / 2;
+            if (arr[mid - 1] == 0 && arr[mid] == 1) {
+                count = arr.length - mid;
+                break;
+            } else if (arr[mid] == 0 && arr[mid + 1] == 1) {
+                count = arr.length - mid + 1;
+                break;
+            } else if (arr[mid - 1] == 1) {
+                end = mid;
+            }else {
+                start = mid;
+            }
+        }
+        System.out.println(count);
+    }
+
+    /**
+     * 最简单的是遍历，知道遇到1的元素为止，时间复杂是N
      *
      * @param arr
      */
     private static void count(int[] arr) {
-        if (arr == null || arr.length == 0) {
-            return;
-        }
-        if (arr.length == 1) {
-            System.out.println(arr[0] == 0 ? 0 : 1);
-            return;
-        }
-        int start = 0;
-        int end = arr.length;
-        while (start < end) {
-            int mid = (start + end) / 2;
-            if (arr[mid] == 1 && arr[mid - 1] == 0) {
-                //{0, 0, 0, 1, 1, 1, 1, 1, 1} mid=3, length=9, count(1) = 6
-                System.out.println(arr.length - mid);
-                return;
-            }
-            if (arr[mid - 1] == 1) {
-                end = mid;
-            } else if (arr[mid] == 0) {
-                start = mid;
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 1) {
+                count = arr.length - i;
+                break;
             }
         }
+        System.out.println("1 count: " + count);
     }
 }
