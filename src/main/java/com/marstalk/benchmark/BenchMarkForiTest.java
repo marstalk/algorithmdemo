@@ -17,7 +17,7 @@ public class BenchMarkForiTest {
 
     @Benchmark
     public void test() {
-
+        System.out.println("zhongbin");
     }
 
     public static void main(String[] args) throws RunnerException {
